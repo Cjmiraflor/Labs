@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('../images/lighthouselogo.jpg'); 
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover;
+    background-position: left;
+    color: white;
+    text-align:center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+
+/* Layout Container */
+.container {
+    display: flex;
+    height: auto;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #f8d7da; 
+    width: 20%; 
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #243f5b; 
+}
+
+nav ul {
+    padding: 0;
+    margin: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+nav ul li {
+    border: 1px solid white; 
+}
+
+nav ul li a {
+    display: block; 
+    padding: 10px; 
+    text-decoration: none;
+    color: #243f5b; 
+    font-weight: bold;
+    background-color: #f8d7da; 
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    background-color: #243f5b; 
+    color: white; 
+}
+
+/* Main Content */
+main {
+    flex: 1; 
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 20px; 
+    border-radius: 8px;
+    float: right;
+}
+
+section {
+    flex: 1; /* Ensures content takes up remaining space */
+}
+
+/* Text Content */
+section h2 {
+    margin-top: 0;
+    color: #4a90e2;
+}
+
+footer {
+    background-color: #243f5b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* === Desktop Mode === */
+
+/* === Tablet Mode === */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks navigation and main vertically */
+    }
+
+    nav {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #243f5b;
+    }
+
+    main {
+        flex-direction: column; /* Content stacks vertically */
+    }
+
+    img {
+        margin-left: 0; 
+        margin-bottom: 20px;
+        float: none;
+        display: block;
+        align-self: center;
+    }
+}
+
+/* === Mobile Mode (480px and below) === */
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+
+    img {
+        width: 100%; 
+        margin: 0 auto 20px auto; 
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 18px; 
+    }
+
+    footer {
+        font-size: 14px; 
+    }
+}
